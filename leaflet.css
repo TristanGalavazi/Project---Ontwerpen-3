@@ -1,1 +1,7 @@
-#mapid { height: 180px; }
+#mapid {
+  height: 805px;
+}
+
+body {
+  background-color: #E1AB24; /* Brown/gold */
+}

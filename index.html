@@ -8,6 +8,8 @@
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
   crossorigin=""></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
   <meta charset="utf-8">
   <style>
 
@@ -49,9 +51,9 @@
 //      ext: 'png'
 //    }).addTo(mymap);
 
-/////// Esri
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}.png?access_token=pk.eyJ1IjoidGdhbGF2YXppIiwiYSI6ImNqd25nbDE0czA2ZTY0YXE5Y2JlaGhzMHUifQ.6cUMk21AtGjtV3NIOh5A_Q', {
-   	 attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
+///// Esri https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}  'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+L.tileLayer('https://api.mapbox.com/styles/v1/tgalavazi/cjwrp8kaj06id1cpmsh9w9hvr/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoidGdhbGF2YXppIiwiYSI6ImNqd25nbDE0czA2ZTY0YXE5Y2JlaGhzMHUifQ.6cUMk21AtGjtV3NIOh5A_Q', {
+   	 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
      minZoom: 0,
 	   maxZoom: 20,
      id: 'mapbox.streets',
@@ -59,11 +61,21 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_M
      ext: 'png'
    }).addTo(mymap);
 
+/////// Mapbox custom map (not working)
+// mapboxgl.accessToken = 'pk.eyJ1IjoidGdhbGF2YXppIiwiYSI6ImNqd25hanZkaTBkOGo0NHBmNzZiM3h1dnYifQ.SXCY7_tryAOk6gdevFap1g';
+// var mymap = new mapboxgl.Map({
+// container: 'mapid', // container id
+// style: 'mapbox://styles/tgalavazi/cjwrp8kaj06id1cpmsh9w9hvr', //hosted style id
+// center: [-77.38, 39], // starting position
+// zoom: 12 // starting zoom
+// });
+
+
  var firstIcon = L.icon({
-       iconUrl: 'icons/African_Burial_Ground_1.png',
-       iconSize:     [110, 70], // size of the icon
-       iconAnchor:   [46, 37], // point of the icon which will correspond to marker's location
-       popupAnchor:  [-3, -25] // point from which the popup should open relative to the iconAnchor
+       iconUrl: 'icons/icon_1.png',
+       iconSize:     [170, 110], // size of the icon
+       iconAnchor:   [95, 90], // point of the icon which will correspond to marker's location
+       popupAnchor:  [-10, -75] // point from which the popup should open relative to the iconAnchor
    });
 
  var marker1 = L.marker([40.71460639867943, -74.00438904762268],
@@ -78,33 +90,61 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_M
  //     }).addTo(mymap);
 
  var secondIcon = L.icon({
-       iconUrl: 'icons/Greenwich_Village_2.png',
-       iconSize:     [180, 120], // size of the icon
-       iconAnchor:   [85, 90], // point of the icon which will correspond to marker's location
-       popupAnchor:  [6, -73] // point from which the popup should open relative to the iconAnchor
+       iconUrl: 'icons/icon_3.png',
+       iconSize:     [170, 110], // size of the icon
+       iconAnchor:   [95, 105], // point of the icon which will correspond to marker's location
+       popupAnchor:  [-8, -90] // point from which the popup should open relative to the iconAnchor
    });
 
- var marker2 = L.marker([40.73378322965845, -74.00274217128754],
+ var marker2 = L.marker([40.707384688773566, -74.0110731124878],
      {icon: secondIcon}
    ).addTo(mymap);
 
  var thirdIcon = L.icon({
-       iconUrl: 'icons/Minetta_Street_3.png',
+       iconUrl: 'icons/icon_2.png',
        iconSize:     [180, 120], // size of the icon
-       iconAnchor:   [85, 90], // point of the icon which will correspond to marker's location
-       popupAnchor:  [6, -73] // point from which the popup should open relative to the iconAnchor
+       iconAnchor:   [90, 110], // point of the icon which will correspond to marker's location
+       popupAnchor:  [-1, -93] // point from which the popup should open relative to the iconAnchor
    });
 
  var marker3 = L.marker([40.72989911752833, -74.00135278701782],
      {icon: thirdIcon}
    ).addTo(mymap);
 
+ var forthIcon = L.icon({
+       iconUrl: 'icons/Peter_Stuyvesant.png',
+       iconSize:     [80, 95], // size of the icon
+       iconAnchor:   [38, 75], // point of the icon which will correspond to marker's location
+       popupAnchor:  [2, -73] // point from which the popup should open relative to the iconAnchor
+   });
+
+ var marker4 = L.marker([40.73007188505245, -73.98701906204224],
+     {icon: forthIcon}
+   ).addTo(mymap);
+
+ var fifthIcon = L.icon({
+       iconUrl: 'icons/icon_4.png',
+       iconSize:     [180, 120], // size of the icon
+       iconAnchor:   [85, 100], // point of the icon which will correspond to marker's location
+       popupAnchor:  [2, -73] // point from which the popup should open relative to the iconAnchor
+   });
+
+ var marker5 = L.marker([40.80337422810372, -73.9319908618927],
+     {icon: fifthIcon}
+   ).addTo(mymap);
+
+
 marker1.bindPopup("<b>African Burial Ground</b><br>lees meer.");
   // .openPopup();  popup open from page-load
 
-marker2.bindPopup("<b>Greenwhich Village</b><br>lees meer.");
+marker2.bindPopup("<b>Wall Street</b><br>lees meer.");
 
 marker3.bindPopup("<b>Minetta Street</b><br>lees meer.");
+
+marker4.bindPopup("<b>Peter Stuyvesant</b><br>lees meer.");
+
+marker5.bindPopup("<b>Harlem African Burial Ground</b><br>lees meer.");
+
 
 /////// free popop on map on page-load
   // var popup = L.popup()
@@ -124,18 +164,7 @@ marker3.bindPopup("<b>Minetta Street</b><br>lees meer.");
   //
   // mymap.on('click', onMapClick);
 
-  var forthIcon = L.icon({
-        iconUrl: 'icons/Peter_Stuyvesant.png',
-        iconSize:     [80, 95], // size of the icon
-        iconAnchor:   [38, 75], // point of the icon which will correspond to marker's location
-        popupAnchor:  [2, -73] // point from which the popup should open relative to the iconAnchor
-    });
 
-  var marker4 = L.marker([40.73007188505245, -73.98701906204224],
-      {icon: forthIcon}
-    ).addTo(mymap);
-
-marker4.bindPopup("<b>Peter Stuyvesant</b><br>lees meer.");
 
   // var polygon = L.polygon([
   //     [40.72642944417465, -73.99178266525269],
@@ -145,7 +174,8 @@ marker4.bindPopup("<b>Peter Stuyvesant</b><br>lees meer.");
   //     [40.72642944417465, -73.99178266525269]
   // ]).addTo(mymap);
 
-  var geojson = {
+// Peter Stuyvesant - The Bowery
+  var geojson1 = {
   "type": "FeatureCollection",
   "features": [
     {
@@ -182,7 +212,145 @@ marker4.bindPopup("<b>Peter Stuyvesant</b><br>lees meer.");
   ]
 }
 
-L.geoJSON(geojson, {
+/// Minetta Street Poly
+  var geojson2 = {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -74.0010604262352,
+              40.73025074978132
+            ],
+            [
+              -74.00135010480881,
+              40.72991741058156
+            ],
+            [
+              -74.00198310613632,
+              40.72974057752329
+            ],
+            [
+              -74.00196701288223,
+              40.729695861043325
+            ],
+            [
+              -74.00132596492767,
+              40.729862531406845
+            ],
+            [
+              -74.00099605321884,
+              40.73021619640526
+            ],
+            [
+              -74.0010604262352,
+              40.73025074978132
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
+
+/// Harlem Busdepot
+  var geojson3 = {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.93263459205627,
+              40.80333362177638
+            ],
+            [
+              -73.9309287071228,
+              40.80261082499311
+            ],
+            [
+              -73.93071413040161,
+              40.80292349647775
+            ],
+            [
+              -73.9308375120163,
+              40.8031914994351
+            ],
+            [
+              -73.9322644472122,
+              40.803804653646004
+            ],
+            [
+              -73.93263459205627,
+              40.80333362177638
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
+
+/// Harlem busdepot begraafplaats
+  var geojson4 = {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.93077850341797,
+              40.80304125548624
+            ],
+            [
+              -73.93187284469604,
+              40.80282197992344
+            ],
+            [
+              -73.93178701400757,
+              40.80250524727603
+            ],
+            [
+              -73.93130421638489,
+              40.802594582278324
+            ],
+            [
+              -73.931143283844,
+              40.80210729898676
+            ],
+            [
+              -73.92988801002502,
+              40.80239966939099
+            ],
+            [
+              -73.93016695976257,
+              40.80317119621865
+            ],
+            [
+              -73.93077850341797,
+              40.80304125548624
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
+
+L.geoJSON(geojson1, {
   style : function(feature) {
     return {
       color: '#c04f26',
@@ -191,8 +359,35 @@ L.geoJSON(geojson, {
   }
 }).addTo(mymap);
 
+L.geoJSON(geojson2, {
+  style : function(feature) {
+    return {
+      color: '#315eaa',
+      weight: 2,
+      fillOpacity: 0.6
+    }
+  }
+}).addTo(mymap);
 
+L.geoJSON(geojson3, {
+  style : function(feature) {
+    return {
+      color: '#cb291a',
+      weight: 2.5,
+      fillOpacity: 0.6
+    }
+  }
+}).addTo(mymap);
 
+L.geoJSON(geojson4, {
+  style : function(feature) {
+    return {
+      color: '#000',
+      weight: 0.4,
+      fillOpacity: 0.4
+    }
+  }
+}).addTo(mymap);
 
 </script>
 </body>

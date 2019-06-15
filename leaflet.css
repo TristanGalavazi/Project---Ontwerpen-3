@@ -7,24 +7,26 @@ body {
   height: 821px;
 	margin: 0;
 	padding: 0;
+  z-index: 1;
+  overflow: hidden;
 }
 
 /* Menu */
 .container1 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
-	width: 80%;
+	width: 60%;
 	margin: 0 auto;
 }
 header {
-	background: #E1AB24
+	background: #E1AB24;
+  box-shadow: 0px 1px 4px #888;
 }
 nav ul {
 	margin: 30;
 	padding: 0;
 	list-style: none;
 }
-
 nav li {
 	display: inline-block;
 	margin-left: 20px;
@@ -61,20 +63,48 @@ header {
 }
 
 
-/* sidenav - African Burial Ground */
-.menu-toggle-checkbox {
-  display: none;
+/* sidenav - African Burial Ground 1.0 links*/
+/* .sidebar {
+  width: 26%;
+  height: 100vh;
+  background-color: #E6CDA2;
+  position: fixed;
+  z-index: 1200;
+  transition: all 1s ease;
+  box-shadow: -15px 1px 50px #000;
 }
-.menu-toggle-checkbox:checked ~ .side-nav {
-  transform: translateX(0);
+.select {
+  width: 0px;
+  position: fixed;
+  z-index: 1200;
+} */
+
+
+/* sidenav - African Burial Ground 2.0 */
+.move-to-left {
+  transform: translateX(-650px);
 }
-.menu-toggle {
-  left: 1rem;
-  /* position: fixed; */
-  transition: color .3s ease;
-  top: 1rem;
-  z-index: 3;
+.move-to-left-partly {
+  transform: translateX(-450px);
 }
+.sidebar {
+  height: 100%;
+  width: 650px;
+  position: fixed;
+  top: 0rem;
+  z-index: 1200;
+  right: -650px;
+  background-color: #E6CDA2;
+  box-shadow: 3px 0px 35px 0px #000;
+  transition: transform 1s ease-in-out;
+}
+.container-liner{
+  margin-left: 1rem;
+}
+
+
+
+
 
 
 
@@ -84,7 +114,6 @@ header {
 
 /* Location icon pulse  */
 .css-icon {
-
 }
 .gps_ring1 {
   box-shadow: 1px 1px 8px 0 rgba(0,0,0,0.5);

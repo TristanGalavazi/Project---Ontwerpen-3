@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="L.Icon.Pulse.css" /> -->
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
   <script type="text/javascript"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
   <meta charset="utf-8">
   <style>
 
@@ -23,19 +25,37 @@
 
 <header>
   <div class="container1">
-    
-    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox"/>
 
-    <nav class="nav1">
+    <!-- <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox"/> -->
+
+    <!-- <nav class="nav1">
       <ul>
-        <li><a href="#" class="menu-toggle" for="menu-toggle">African Burial Ground</a></li>
+        <li><a href="#" id="sidebar1">African Burial Ground</a></li>
         <li><a href="#">Wall Street</a></li>
         <li><a href="#">Minetta Street</a></li>
         <li><a href="#">The Bowery</a></li>
         <li><a href="#">Harlem Burial Ground</a></li>
       </ul>
-   </nav>
-<span class="overlay">&nbsp;</span>
+    </nav> -->
+
+    <nav class="nav1">
+      <ul>
+        <li><a href="#" onclick="toggleSidebar()">African Burial Ground</a></li>
+        <li><a href="#">Wall Street</a></li>
+        <li><a href="#">Minetta Street</a></li>
+        <li><a href="#">The Bowery</a></li>
+        <li><a href="#">Harlem Burial Ground</a></li>
+      </ul>
+    </nav>
+
+
+    <div class="sidebar" id="sidebar">
+      <div class="container-liner">
+        <h4>African Burial Ground</h4>
+        <div class="">We beginnen op de African Burial Ground,in het hart van het financiële district. Op de hoek van Duane en Elk Street, verstopt achter het 34 verdiepingen tellende Ted Weiss Federal Building, ligt een klein grasveld met in het midden een enorm granieten monument.
+        </div>
+     </div>
+    </div>
 
    <!-- <nav1 class="sidenav1" id="sidebar1">
      <a href="#" id="hidebtn" onclick="hide()">&#10005;</a>
@@ -47,11 +67,13 @@
   </nav1>
     <a href="#" id="showbtn" onclick="show()">&#10005;</a> -->
 
-
+  </div>
 </header>
 
 
- </div>
+  <!-- <div class="select sidebar">
+  </div> -->
+
 
  <div id="mapid"></div>
 
@@ -59,15 +81,18 @@
 <script>
 
 
-// function hide() {
-//   document.getElementById('sidebar1').style.display='none';
-// }
-// function show() {
-//   document.getElementById('sidebar1').style.display='block';
-// }
-
-
  var mymap = L.map('mapid').setView([40.7759, -73.9682], 12);
+
+/////slidebar 1.0 links
+ // $('#sidebar1').on('click', function() {
+ //   $(".sidebar").toggleClass('select');
+ //   $("#sidebar1").toggleClass('open');
+ // });
+
+ function toggleSidebar(){
+   $("#sidebar").toggleClass("move-to-left");
+ }
+
 
 ///// Regular map
 // L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidGdhbGF2YXppIiwiYSI6ImNqd25nbDE0czA2ZTY0YXE5Y2JlaGhzMHUifQ.6cUMk21AtGjtV3NIOh5A_Q', {
@@ -145,10 +170,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/tgalavazi/cjwrp8kaj06id1cpmsh9w9hv
  // var markerOne = L.marker([40.71460639867943, -74.00438904762268],
  //     {icon: pulsingicon1},
  //   ).addTo(mymap);
-
-
-
-
 
  var secondIcon = L.icon({
        iconUrl: 'icons/icon_3.png',

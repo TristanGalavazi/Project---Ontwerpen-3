@@ -33,7 +33,7 @@
       <ul>
         <li><a href="#" onclick="toggleSidebar()">African Burial Ground</a></li>
         <li><a href="#" onclick="toggleSidebar1()">Wall Street</a></li>
-        <li><a href="#">Minetta Street</a></li>
+        <li><a href="#" onclick="toggleSidebar2()">Minetta Street</a></li>
         <li><a href="#">The Bowery</a></li>
         <li><a href="#">Harlem Burial Ground</a></li>
       </ul>
@@ -95,6 +95,66 @@
      </div>
     </div>
 
+    <!-- SIDEBAR 3 -->
+        <div class="sidebar3" id="sidebar3">
+          <div class="container-liner">
+            <a href="#" class="close" onclick="toggleSidebar2()"></a>
+              <div class="h1info3">De huidige Minetta Street / De Minetta Creek die toendestijds nog door Nieuw-Amsterdam liep.</div>
+            <h4>Minetta Street</h4>
+            <hr/>
+              <div class=imginfo3container>
+                <div id="imginfo3">
+                  <span>1664+</span>
+                </div>
+              </div>
+            <div class="imgbox">
+              <div id="img3-2"></div>
+              <div id="img3"></div>
+            </div>
+            <h1 class="titel3">Greenwhich Village: Minetta Street waar veel slaven woonden</h1>
+            <div class="p1">In 1644 presenteerden, en hier komen die unieke rechten en vrijheden om de hoek kijken, elf slaven WIC-directeur Willem Kieft een petitie waarin zij hun vrijheid eisten. Uiteindelijk kregen deze slaven, evenals hun vrouwen, een soort ‘half-vrijheid’ toegekend.
+            </div>
+            <div class="p2">Dit hield in dat ze de WIC een jaarlijkse belasting moesten betalen, iets wat witte kolonisten niet hoefden, maar in ruil daarvoor zelfstandig met hun gezinnen op een stuk land konden wonen dat zij zelf mochten verbouwen en waarvan ze de opbrengst mochten houden. Ook hoefden ze niet op andere koloniën te werken.  Wel moesten ze werkzaamheden verrichten wanneer de WIC daarom vroeg en zouden hun kinderen als slaaf geboren worden.
+            </div>
+            <h2>Minetta Creek: Het oude beekje</h2>
+            <div class="p3">De boerderijen van deze gemeenschap lagen in de wijk die nu Greenwich Village heet.  In 1664 woonden er zo’n dertig vrije en half-vrije zwarte landeigenaren met hun gezinnen.
+            </div>
+            <div class="p4">Er is in Greenwich Village weinig overgebleven dat doet herinneren aan die tijd. Het meest in de buurt komt Minetta Street: een klein en krommend steegje twee blokken van Washington Square Park. De kromming van dit steegje volgt wat vroeger een beekje was dat langs de boerderijen van de slaven liep.
+            </div>
+         </div>
+        </div>
+
+        <!-- SIDEBAR 4 -->
+            <div class="sidebar3" id="sidebar3">
+              <div class="container-liner">
+                <a href="#" class="close" onclick="toggleSidebar2()"></a>
+                  <div class="h1info3">De huidige Minetta Street / De Minetta Creek die toendestijds nog door Nieuw-Amsterdam liep.</div>
+                <h4>Minetta Street</h4>
+                <hr/>
+                  <div class=imginfo3container>
+                    <div id="imginfo3">
+                      <span>1664+</span>
+                    </div>
+                  </div>
+                <div class="imgbox">
+                  <div id="img3-2"></div>
+                  <div id="img3"></div>
+                </div>
+                <h1 class="titel3">Greenwhich Village: Minetta Street waar veel slaven woonden</h1>
+                <div class="p1">In 1644 presenteerden, en hier komen die unieke rechten en vrijheden om de hoek kijken, elf slaven WIC-directeur Willem Kieft een petitie waarin zij hun vrijheid eisten. Uiteindelijk kregen deze slaven, evenals hun vrouwen, een soort ‘half-vrijheid’ toegekend.
+                </div>
+                <div class="p2">Dit hield in dat ze de WIC een jaarlijkse belasting moesten betalen, iets wat witte kolonisten niet hoefden, maar in ruil daarvoor zelfstandig met hun gezinnen op een stuk land konden wonen dat zij zelf mochten verbouwen en waarvan ze de opbrengst mochten houden. Ook hoefden ze niet op andere koloniën te werken.  Wel moesten ze werkzaamheden verrichten wanneer de WIC daarom vroeg en zouden hun kinderen als slaaf geboren worden.
+                </div>
+                <h2>Minetta Creek: Het oude beekje</h2>
+                <div class="p3">De boerderijen van deze gemeenschap lagen in de wijk die nu Greenwich Village heet.  In 1664 woonden er zo’n dertig vrije en half-vrije zwarte landeigenaren met hun gezinnen.
+                </div>
+                <div class="p4">Er is in Greenwich Village weinig overgebleven dat doet herinneren aan die tijd. Het meest in de buurt komt Minetta Street: een klein en krommend steegje twee blokken van Washington Square Park. De kromming van dit steegje volgt wat vroeger een beekje was dat langs de boerderijen van de slaven liep.
+                </div>
+             </div>
+            </div>
+
+
+
    <!-- <div class="footer1"></div> -->
 
 
@@ -117,6 +177,7 @@
  //   $("#sidebar1").toggleClass('open');
  // });
 
+// SIDEBAR 1
  function toggleSidebar(){
    $("#sidebar").toggleClass("move-to-left");
  }
@@ -135,6 +196,18 @@ $(document).ready(function () {
         $("#img2").toggle();
     });
 });
+
+// SIDEBAR 2
+function toggleSidebar2(){
+  $("#sidebar3").toggleClass("move-to-left3");
+}
+$(document).ready(function () {
+    $("#imginfo3").click(function () {
+        $("#img3").toggle();
+    });
+});
+
+
 ///// Regular map
 // L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidGdhbGF2YXppIiwiYSI6ImNqd25nbDE0czA2ZTY0YXE5Y2JlaGhzMHUifQ.6cUMk21AtGjtV3NIOh5A_Q', {
 //      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',

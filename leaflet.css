@@ -77,23 +77,6 @@ header {
 }
 
 
-/* sidenav - African Burial Ground 1.0 links*/
-/* .sidebar {
-  width: 26%;
-  height: 100vh;
-  background-color: #E6CDA2;
-  position: fixed;
-  z-index: 1200;
-  transition: all 1s ease;
-  box-shadow: -15px 1px 50px #000;
-}
-.select {
-  width: 0px;
-  position: fixed;
-  z-index: 1200;
-} */
-
-
 /* sidenav - African Burial Ground 2.0 */
 .move-to-left {
   transform: translateX(-650px);
@@ -209,6 +192,16 @@ transition: 1s ease-in-out;
 margin-top: 25px;
 margin-bottom: 45px;
 }
+.h1info {
+  font-family: 'Hoefler Text Italic';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #FFF;
+  position: absolute;
+  top: 585px;
+}
+
 .h2info {
   font-family: 'Hoefler Text Italic';
   font-style: normal;
@@ -216,7 +209,7 @@ margin-bottom: 45px;
   font-size: 12px;
   color: #FFF;
   position: absolute;
-  top: 1345px;
+  top: 1515px;
 }
 
 /* Button1 1690 - 1794 */
@@ -260,7 +253,7 @@ h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
   font-size: 25px;
-  margin-top: 20px;
+  margin-top: 65px;
   color: #FFF;
 }
 h2 {
@@ -310,6 +303,188 @@ hr {
 
 
 
+/* sidenav - Wall Street */
+.move-to-left2 {
+  transform: translateX(-650px);
+}
+.move-to-left2-partly {
+  transform: translateX(-450px);
+}
+.sidebar2 {
+  height: 100%;
+  width: 650px;
+  position: fixed;
+  top: 0rem;
+  z-index: 1200;
+  right: -650px;
+  background-color: #D08865;
+  box-shadow: 3px 0px 35px 0px #000;
+  transition: transform 1s ease-in-out;
+  overflow: auto;
+}
+
+
+/* Closing icon */
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+}
+.close:hover {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #FFF;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+h4 {
+  font-family: 'Hoefler Text';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: #FFF;
+}
+.imgbox {
+  height: 50%;
+  width: 93%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#img2-2 {
+  height: 44%;
+  width: 78%;
+  padding: 39px;
+  background-image: url("images/Wall_Street_17th.jpg");
+  background-repeat: no-repeat;
+  background-size: 111%;
+  transition: 1s ease-in-out;
+  position: absolute;
+  left: 32px;
+  top: 135px;
+}
+#img2 {
+height: 44%;
+width: 78%;
+padding: 39px;
+background-image: url("images/Wall_Street_Nu.jpg");
+background-repeat: no-repeat;
+background-size: 100.5%;
+transition: 1s ease-in-out;
+position: absolute;
+left: 32px;
+top: 135px;
+}
+.h1info2 {
+  font-family: 'Hoefler Text Italic';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #FFF;
+  position: absolute;
+  top: 515px;
+}
+
+/* Button1 1690 - 1794 */
+.imginfo2container {
+  position: absolute;
+  top: 22%;
+  left: 17%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1300;
+}
+#imginfo2 {
+  border: 1px solid #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-transition: background-color 100ms linear;
+  -ms-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
+}
+#imginfo2 span {
+  font-family: "Hoefler Text", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #FFF;
+  -webkit-transition: color 100ms linear;
+  -ms-transition: color 100ms linear;
+  transition: color 100ms linear;
+}
+#imginfo2:hover {
+  background: #fff;
+}
+#imginfo2:hover span {
+  color: #242424;
+}
+
+.titel2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: -10px;
+  color: #FFF;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 35px;
+  color: #FFF;
+}
+.p1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #FFF;
+}
+.p2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #FFF;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* .footer1 {
 content: "";
 pointer-events: none;
@@ -322,15 +497,6 @@ border-bottom: 20px solid rgb(154, 59, 23);
 overflow: auto;
 z-index: 1300;
 } */
-
-
-
-
-
-
-
-
-
 
 
 /* Location icon pulse  */
@@ -390,25 +556,6 @@ z-index: 1300;
 
 
 
-
-/* .sidenav1 {
-  height: 200%;
-  width: 50%;
-  background-color: red;
-  position: absolute;
-  z-index: 500;
-}
-.sidenav1 li {
-  list-style-type: none;
-  padding: 20px;
-}
-#hidebtn {
-  color: white;
-  text-decoration: none;
-  position: relative;
-  top: 5px;
-  left: 5px;
-} */
 
 
 

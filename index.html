@@ -2,6 +2,7 @@
 <head>
   <title>Sporen van slavernij</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="leaflet.css">
   <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -24,6 +25,7 @@
 <body>
 
 <header>
+
   <div class="container1">
 
     <!-- <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox"/> -->
@@ -51,10 +53,33 @@
 
     <div class="sidebar" id="sidebar">
       <div class="container-liner">
+        <a href="#" class="close" onclick="toggleSidebar()"></a>
+                          <div class="h2info">Opgravingen tijdens de bouw van de Ted Weiss Federal Building.</div>
         <h4>African Burial Ground</h4>
-        <div class="">We beginnen op de African Burial Ground,in het hart van het financiële district. Op de hoek van Duane en Elk Street, verstopt achter het 34 verdiepingen tellende Ted Weiss Federal Building, ligt een klein grasveld met in het midden een enorm granieten monument.
+        <hr/>
+          <div class=imginfo1container>
+            <div id="imginfo1">
+              <span>1690-1794</span>
+            </div>
+          </div>
+        <div class="imgbox">
+          <div id="img1-2"></div>
+          <div id="img1"></div>
+        </div>
+        <h1>African Burial Grounds: Waar duizenden slaven begraven liggen</h1>
+        <div class="p1">We beginnen op de African Burial Ground, in het hart van het financiële district. Op de hoek van <em>Duane</em> en <em>Elk Street</em>, verstopt achter het 34 verdiepingen tellende Ted Weiss Federal Building, ligt een klein grasveld met in het midden een enorm granieten monument.
+        </div>
+        <div class="p2">Een monument ter nagedachtenis aan de <strong>15.000</strong> tot <strong>20.000</strong> slaven en vrije zwarte New Yorkers die hier, in een gebied tussen <em>Duane Street, Chambers Street, Lafayette Street</em> en <em>Broadway</em>, 22 keer zo groot als het grasveld waar ik sta, in de zeventiende en achttiende eeuw werden begraven.
+        </div>
+          <h2>Onder het financiële district, New York</h2>
+        <div class="p3">Volgens historici is de Negros Buriel Ground, zoals deze op historische kaarten staat aangegeven, door de Engelsen gesticht in 1690. Dit omdat vrije zwarte New Yorkers en slaven hun doden niet op het reguliere kerkhof mochten begraven.
+        </div>
+          <div id="img1-3"></div>
+        <div class="p4">Tot voor kort was het bestaan van deze African Burial Ground eigenlijk alleen onder gespecialiseerde historici bekend. Pas toen in 1991 de bouw van het Ted Weiss Federal Building startte en de bouwers op graf na graf stuitten, drong het bestaan van de begraafplaats door tot de New Yorkers en de rest van Amerika.
+                        De ontdekking maakte duidelijk dat slavernij niet enkel iets van de zuidelijke staten was, maar diepe wortels had in heel Amerika - zelfs in een liberale stad als New York. Bovendien maakte de opgraving duidelijk dat slavernij grootschaliger en vanaf het begin aanwezig was geweest. En gefaciliteerd werd door de Nederlanders.
         </div>
      </div>
+       <!-- <div class="footer1"></div> -->
     </div>
 
    <!-- <nav1 class="sidenav1" id="sidebar1">
@@ -92,6 +117,12 @@
  function toggleSidebar(){
    $("#sidebar").toggleClass("move-to-left");
  }
+
+$(document).ready(function () {
+    $("#imginfo1").click(function () {
+        $("#img1").toggle();
+    });
+});
 
 
 ///// Regular map

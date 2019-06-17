@@ -1,3 +1,16 @@
+@font-face {
+font-family: 'Hoefler Text';
+font-style: normal;
+font-weight: normal;
+src: local('Hoefler Text'), url('fonts/Hoefler-text.woff') format('woff');
+}
+@font-face {
+font-family: 'Hoefler Text Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Hoefler Text Italic'), url('fonts/Hoefler-text-italic.woff') format('woff');
+}
+
 #mapid {
   height: 821px;
 }
@@ -37,6 +50,7 @@ nav a {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 14px;
+  transition: ease-in-out 0.6s;
 }
 nav a:hover {
 	color: #e03610;
@@ -94,13 +108,220 @@ header {
   top: 0rem;
   z-index: 1200;
   right: -650px;
-  background-color: #E6CDA2;
+  background-color: #9A3B17;
   box-shadow: 3px 0px 35px 0px #000;
   transition: transform 1s ease-in-out;
+  overflow: auto;
 }
 .container-liner{
-  margin-left: 1rem;
+  margin: 2rem;
 }
+
+/* Closing icon */
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+}
+.close:hover {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #FFF;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+h4 {
+  font-family: 'Hoefler Text';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: #FFF;
+}
+.imgbox {
+  height: 50%;
+  width: 93%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#img1-2 {
+  /* height: 50%;
+  width: 93%;
+  padding: 20px;
+  background-image: url("images/African_Burial_Ground_Manhattan.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s ease-in-out; */
+  height: 44%;
+  width: 78%;
+  padding: 39px;
+  background-image: url("images/African_Burial_Ground_Manhattan.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s ease-in-out;
+  position: absolute;
+  left: 32px;
+  top: 135px;
+}
+#img1 {
+  /* height: 50%;
+  width: 93%;
+  padding: 20px;
+  background-image: url("images/African_Burial_Ground_National_Monument.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s ease-in-out; */
+height: 44%;
+width: 78%;
+padding: 39px;
+background-image: url("images/African_Burial_Ground_National_Monument.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+transition: 1s ease-in-out;
+position: absolute;
+left: 32px;
+top: 135px;
+}
+#img1-3 {
+height: 45%;
+width: 86%;
+padding: 40px;
+background-image: url("images/Ted_Weiss_Federal_Building_Museum.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+transition: 1s ease-in-out;
+margin-top: 25px;
+margin-bottom: 45px;
+}
+.h2info {
+  font-family: 'Hoefler Text Italic';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #FFF;
+  position: absolute;
+  top: 1345px;
+}
+
+/* Button1 1690 - 1794 */
+.imginfo1container {
+  position: absolute;
+  top: 22%;
+  left: 19%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1300;
+}
+#imginfo1 {
+  border: 1px solid #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-transition: background-color 100ms linear;
+  -ms-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
+}
+#imginfo1 span {
+  font-family: "Hoefler Text", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #FFF;
+  -webkit-transition: color 100ms linear;
+  -ms-transition: color 100ms linear;
+  transition: color 100ms linear;
+}
+#imginfo1:hover {
+  background: #fff;
+}
+#imginfo1:hover span {
+  color: #242424;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: 20px;
+  color: #FFF;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 35px;
+  color: #FFF;
+}
+.p1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #FFF;
+}
+.p2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #FFF;
+}
+.p3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #FFF;
+}
+.p4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #FFF;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+/* .footer1 {
+content: "";
+pointer-events: none;
+background-image: linear-gradient(to top, rgb(154, 59, 23), rgba(154, 59, 23, 0));
+position: fixed;
+bottom: 0px;
+height: 100px;
+width: 700px;
+border-bottom: 20px solid rgb(154, 59, 23);
+overflow: auto;
+z-index: 1300;
+} */
 
 
 
@@ -130,7 +351,6 @@ header {
       50% {opacity: 1.0;}
       100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
 }
-
 .gps_ring2 {
   box-shadow: 1px 1px 8px 0 rgba(0,0,0,0.5);
   margin-left: -11px;
@@ -142,7 +362,6 @@ header {
   -webkit-animation: pulse 1s ease-out;
   -webkit-animation-iteration-count: infinite;
 }
-
 .gps_ring3 {
   box-shadow: 1px 1px 8px 0 rgba(0,0,0,0.5);
   margin-left: -1px;
@@ -154,7 +373,6 @@ header {
   -webkit-animation: pulse 1s ease-out;
   -webkit-animation-iteration-count: infinite;
 }
-
 .gps_ring5 {
   box-shadow: 1px 1px 8px 0 rgba(0,0,0,0.5);
   margin-left: 4px;

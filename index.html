@@ -17,7 +17,6 @@
   <script type="text/javascript"></script>
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-  <script src="http://maximeh.github.io/leaflet.bouncemarker/bouncemarker.js"></script>
   <meta charset="utf-8">
   <style>
 
@@ -129,7 +128,8 @@
             <div class="sidebar4" id="sidebar4">
               <div class="container-liner">
                 <a href="#" class="close" onclick="toggleSidebar3()"></a>
-                  <div class="h1info4">Het huidige Bowery gebied / De Bowery (de bouwerij) rond 1645-1664. </div>
+                  <div class="h1info4">Het huidige Bowery gebied / De Bowery (de bouwerij) rond 1645-1664.</div>
+                  <div class="h1info5">St Mark Church: De kerk waar Peter Stuyvesant begraven ligt.</div>
                 <h4>The Bowery</h4>
                 <hr/>
                   <div class=imginfo4container>
@@ -141,12 +141,13 @@
                   <div id="img4-2"></div>
                   <div id="img4"></div>
                 </div>
-                <h1 class="titel4">De Boederij van gouverneur Peter Stuyvesant in Nieuw-Amsterdam</h1>
+                <h1 class="titel4">De Boerderij van gouverneur Peter Stuyvesant in Nieuw-Amsterdam</h1>
                 <div class="p1">Rechts van Greenwich Village ligt nog een ander stadsdeel dat gelinkt is aan het Nederlandse slavernijverleden: The Bowery. Dit was vroeger de boerderij van directeur-generaal Peter Stuyvesant, die Nieuw Amsterdam van 1645 tot 1664 bestuurde. Zijn land liep ongeveer vanaf waar tegenwoordig 3d Street ligt tot St. Mark’s Church in-the-Bowery, waar Stuyvesant ligt begraven. Stuyvesant was, naast de WIC zelf, de grootste slavenhouder van Nieuw Amsterdam met in totaal tien slaven in zijn bezit.
                 </div>
                 <div id="img4-3"></div>
                 <div class="p2">St. Mark’s Church is te vinden in the Bowery (de bouwerij) en werd gebouwd boven op de oude familiekapel van de familie Stuyvesant. St. Mark’s is waarschijnlijk de oudste plek in New York waar regelmatig christelijke erediensten worden gehouden.
                 </div>
+                <div id="img4-4"></div>
              </div>
             </div>
 
@@ -154,9 +155,9 @@
                 <div class="sidebar5" id="sidebar5">
                   <div class="container-liner">
                     <a href="#" class="close" onclick="toggleSidebar4()"></a>
-                      <div class="h1info5">Het huidige Bowery gebied / De Bowery (de bouwerij) rond 1645-1664. </div>
-                      <div class="h1info6">Elmendorf Reformed Church: vroeger ook wel de "Low Dutch Reformed Church" genoemd.</div>
-                    <h4>Harlem Buril Ground</h4>
+                      <div class="h1info6">Verlaten bus depot in East Harlem / Het landschap in Harlem in 1812.</div>
+                      <div class="h1info7">Elmendorf Reformed Church: vroeger ook wel de "Low Dutch Reformed Church" genoemd.</div>
+                    <h4>Harlem Burial Ground</h4>
                     <hr/>
                       <div class=imginfo5container>
                         <div id="imginfo5">
@@ -167,11 +168,15 @@
                       <div id="img5-2"></div>
                       <div id="img5"></div>
                     </div>
-                    <h1 class="titel5">De Boederij van gouverneur Peter Stuyvesant in Nieuw-Amsterdam</h1>
-                    <div class="p1">Hier komen wij aan bij de African Burial Ground in Harlem, waar tot 1850 vrije zwarte New Yorkers en slaven begraven werden en waar nu een verlaten busdepot staat. Deze begraafplaats was verbonden aan de Low Dutch Reformed Church, die in 1660 door Nederlandse kolonisten werd gebouwd.
+                    <h1 class="titel5">Harlem Burial Ground: Waar elke verwijzing naar het verleden ontbreekt</h1>
+                    <div class="p1">De African Burial Ground in Harlem, waar tot 1850 vrije zwarte New Yorkers en slaven begraven werden en waar nu een verlaten busdepot staat. Deze begraafplaats was verbonden aan de Low Dutch Reformed Church, die in 1660 door Nederlandse kolonisten werd gebouwd.
+                    </div>
+                    <div class="p2">Eind 2015 werd er voor het eerst archeologisch onderzoek gedaan. In totaal werden er onder de betonnen vloer van het depot zo’n 140 botten en botfragmenten en één intacte schedel van een vrouw van Afrikaanse afkomst gevonden. De vondst laat zien dat Afro-Amerikanen al vanaf het begin een deel uitmaakten van de Harlemse gemeenschap. Tot voor kort werd de aanwezigheid van zwarte bewoners in Harlem in de beginjaren van de wijk en de rol die zij in die vroeg-koloniale gemeenschap speelden nauwelijks erkend. De toestroom van Afro-Amerikanen naar Harlem aan het begin van de twintigste eeuw wordt doorgaans als beginpunt van Afro-Amerikaanse invloed op de wijk aangemerkt.
                     </div>
                     <div id="img5-3"></div>
-                    <div class="p2">St. Mark’s Church is te vinden in the Bowery (de bouwerij) en werd gebouwd boven op de oude familiekapel van de familie Stuyvesant. St. Mark’s is waarschijnlijk de oudste plek in New York waar regelmatig christelijke erediensten worden gehouden.
+                    <div class="p3">Je kan je afvragen of deze African Burial Ground de lokale bevolking wel bezighoudt. Dit deel van New York werd lange tijd gekenmerkt door zware armoede, drugsproblemen, criminaliteit en verwaarloosde sociale woningbouw. Alhoewel Harlem de afgelopen jaren veel rustiger is geworden en in rap tempo gentrificeert, verraden de vervallen flatgebouwen, vervuilde straten en goedkope cornerstores nog steeds het verwaarloosde Harlem dat het ooit was.
+                    </div>
+                    <div class="p4">De meeste mensen die hier boven de grond rondlopen, hebben vermoedelijk dus andere dingen aan hun hoofd. Bovendien verwacht ik niet dat de overheid evenveel moeite en geld zal steken in onderzoek en een gedenkplek in deze uithoek van Harlem als zij deed voor de African Burial Ground in het hartje van het financiële district.
                     </div>
                  </div>
                 </div>
@@ -285,16 +290,23 @@ L.tileLayer('https://api.mapbox.com/styles/v1/tgalavazi/cjwrp8kaj06id1cpmsh9w9hv
    }).addTo(mymap);
 
 
- var firstIcon = L.icon({
-       iconUrl: 'icons/icon_1.png',
-       iconSize:     [170, 110], // size of the icon
-       iconAnchor:   [95, 90], // point of the icon which will correspond to marker's location
-       popupAnchor:  [-10, -75], // point from which the popup should open relative to the iconAnchor
-   });
+ // var firstIcon = L.icon({
+ //       iconUrl: 'icons/icon_1.png',
+ //       iconSize:     [170, 110], // size of the icon
+ //       iconAnchor:   [95, 90], // point of the icon which will correspond to marker's location
+ //       popupAnchor:  [-10, -75], // point from which the popup should open relative to the iconAnchor
+ //   });
 
  var marker1 = L.marker([40.71460639867943, -74.00438904762268],
-     {icon: firstIcon},
-   ).addTo(mymap);
+     {
+     icon: L.icon({
+           iconUrl: 'icons/icon_1.png',
+           iconSize:     [170, 110], // size of the icon
+           iconAnchor:   [95, 90], // point of the icon which will correspond to marker's location
+           popupAnchor:  [-10, -75], // point from which the popup should open relative to the iconAnchor
+           className: 'blink',
+     })
+   }).addTo(mymap);
 
 
 

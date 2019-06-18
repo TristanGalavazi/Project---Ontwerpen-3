@@ -766,12 +766,23 @@ h4 {
   height: 45%;
   width: 86%;
   padding: 40px;
-  background-image: url("images/Suyvesant_St.jpg");
+  background-image: url("images/Stuyvesant_St.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   transition: 1s ease-in-out;
   margin-top: 25px;
-  margin-bottom: -175px;
+  margin-bottom: -245px;
+}
+#img4-4 {
+  height: 40%;
+  width: 86%;
+  padding: 40px;
+  background-image: url("images/St_Mark_Church_NY.jpg");
+  background-repeat: no-repeat;
+  background-size: 55%;
+  transition: 1s ease-in-out;
+  margin-top: 30px;
+  margin-bottom: 0px;
 }
 .h1info4 {
   font-family: 'Hoefler Text Italic';
@@ -782,12 +793,21 @@ h4 {
   position: absolute;
   top: 585px;
 }
+.h1info5 {
+  font-family: 'Hoefler Text Italic';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #FFF;
+  position: absolute;
+  top: 1565px;
+}
 
 /* Button1 1690 - 1794 */
 .imginfo4container {
   position: absolute;
   top: 22%;
-  left: 17%;
+  left: 19%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 1300;
 }
@@ -977,7 +997,7 @@ h4 {
   margin-top: 25px;
   margin-bottom: -115px;
 }
-.h1info5 {
+.h1info6 {
   font-family: 'Hoefler Text Italic';
   font-style: normal;
   font-weight: normal;
@@ -986,14 +1006,14 @@ h4 {
   position: absolute;
   top: 585px;
 }
-.h1info6 {
+.h1info7 {
   font-family: 'Hoefler Text Italic';
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   color: #FFF;
   position: absolute;
-  top: 1130px;
+  top: 1320px;
 }
 
 /* Button1 1690 - 1794 */
@@ -1083,6 +1103,17 @@ hr {
 
 
 
+
+
+
+
+
+.blink {
+  animation: fade 1s infinite alternate;
+}
+@keyframes fade {
+  from { opacity: 0.5; }
+}
 
 
 

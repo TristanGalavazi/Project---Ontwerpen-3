@@ -672,6 +672,421 @@ hr {
 
 
 
+/* sidenav - The Bowery */
+.move-to-left4 {
+  transform: translateX(-650px);
+}
+.move-to-left4-partly {
+  transform: translateX(-450px);
+}
+.sidebar4 {
+  height: 100%;
+  width: 650px;
+  position: fixed;
+  top: 0rem;
+  z-index: 1200;
+  right: -650px;
+  background-color: #B2793D;
+  box-shadow: 3px 0px 35px 0px #000;
+  transition: transform 1s ease-in-out;
+  overflow: auto;
+}
+.container-liner{
+  margin: 2rem;
+}
+
+/* Closing icon */
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+}
+.close:hover {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #FFF;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+h4 {
+  font-family: 'Hoefler Text';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: #FFF;
+}
+.imgbox {
+  height: 50%;
+  width: 93%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#img4-2 {
+  height: 44%;
+  width: 78%;
+  padding: 39px;
+  background-image: url("images/The_Bowery_1645_1664.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s ease-in-out;
+  position: absolute;
+  left: 32px;
+  top: 135px;
+}
+#img4 {
+  height: 44%;
+  width: 78%;
+  padding: 39px;
+  background-image: url("images/Bowery_Lane.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s ease-in-out;
+  position: absolute;
+  left: 32px;
+  top: 135px;
+}
+#img4-3 {
+  height: 45%;
+  width: 86%;
+  padding: 40px;
+  background-image: url("images/Suyvesant_St.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: 1s ease-in-out;
+  margin-top: 25px;
+  margin-bottom: -175px;
+}
+.h1info4 {
+  font-family: 'Hoefler Text Italic';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #FFF;
+  position: absolute;
+  top: 585px;
+}
+
+/* Button1 1690 - 1794 */
+.imginfo4container {
+  position: absolute;
+  top: 22%;
+  left: 17%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1300;
+}
+#imginfo4 {
+  border: 1px solid #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-transition: background-color 100ms linear;
+  -ms-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
+}
+#imginfo4 span {
+  font-family: "Hoefler Text", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #FFF;
+  -webkit-transition: color 100ms linear;
+  -ms-transition: color 100ms linear;
+  transition: color 100ms linear;
+}
+#imginfo4:hover {
+  background: #fff;
+}
+#imginfo4:hover span {
+  color: #242424;
+}
+
+.titel4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: 60px;
+  color: #FFF;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 35px;
+  color: #FFF;
+}
+.p1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #FFF;
+}
+.p2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #FFF;
+}
+.p3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #FFF;
+}
+.p4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #FFF;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* sidenav - Harlem Burial Ground */
+.move-to-left5 {
+  transform: translateX(-650px);
+}
+.move-to-left5-partly {
+  transform: translateX(-450px);
+}
+.sidebar5 {
+  height: 100%;
+  width: 650px;
+  position: fixed;
+  top: 0rem;
+  z-index: 1200;
+  right: -650px;
+  background-color: #B27358;
+  box-shadow: 3px 0px 35px 0px #000;
+  transition: transform 1s ease-in-out;
+  overflow: auto;
+}
+.container-liner{
+  margin: 2rem;
+}
+
+/* Closing icon */
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+}
+.close:hover {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #FFF;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+h4 {
+  font-family: 'Hoefler Text';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: #FFF;
+}
+.imgbox {
+  height: 50%;
+  width: 93%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#img5-2 {
+  height: 44%;
+  width: 78%;
+  padding: 39px;
+  background-image: url("images/Harlem_Plains.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s ease-in-out;
+  position: absolute;
+  left: 32px;
+  top: 135px;
+}
+#img5 {
+  height: 44%;
+  width: 78%;
+  padding: 39px;
+  background-image: url("images/Bus_Depot.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s ease-in-out;
+  position: absolute;
+  left: 32px;
+  top: 135px;
+}
+#img5-3 {
+  height: 45%;
+  width: 85%;
+  padding: 40px;
+  background-image: url("images/Elmendorf_Reformed_Church.jpg");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  transition: 1s ease-in-out;
+  margin-top: 25px;
+  margin-bottom: -115px;
+}
+.h1info5 {
+  font-family: 'Hoefler Text Italic';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #FFF;
+  position: absolute;
+  top: 585px;
+}
+.h1info6 {
+  font-family: 'Hoefler Text Italic';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #FFF;
+  position: absolute;
+  top: 1130px;
+}
+
+/* Button1 1690 - 1794 */
+.imginfo5container {
+  position: absolute;
+  top: 22%;
+  left: 17%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1300;
+}
+#imginfo5 {
+  border: 1px solid #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-transition: background-color 100ms linear;
+  -ms-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
+}
+#imginfo5 span {
+  font-family: "Hoefler Text", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #FFF;
+  -webkit-transition: color 100ms linear;
+  -ms-transition: color 100ms linear;
+  transition: color 100ms linear;
+}
+#imginfo5:hover {
+  background: #fff;
+}
+#imginfo5:hover span {
+  color: #242424;
+}
+
+.titel5 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: 60px;
+  color: #FFF;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 35px;
+  color: #FFF;
+}
+.p1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #FFF;
+}
+.p2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #FFF;
+}
+.p3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #FFF;
+}
+.p4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #FFF;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
 
 
 

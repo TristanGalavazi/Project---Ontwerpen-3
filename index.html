@@ -435,16 +435,16 @@ L.tileLayer('https://api.mapbox.com/styles/v1/tgalavazi/cjwrp8kaj06id1cpmsh9w9hv
      {icon: cssIcon},
   ).addTo(mymap);
 
-marker1.bindPopup("<b>African Burial Ground</b><br>lees meer.");
+marker1.bindPopup("<b>African Burial Ground</b><br>");
   // .openPopup();  popup open from page-load
 
-marker2.bindPopup("<b>Wall Street</b><br>lees meer.");
+marker2.bindPopup("<b>Wall Street</b>");
 
-marker3.bindPopup("<b>Minetta Street</b><br>lees meer.");
+marker3.bindPopup("<b>Minetta Street</b>");
 
-marker4.bindPopup("<b>Peter Stuyvesant</b><br>lees meer.");
+marker4.bindPopup("<b>Peter Stuyvesant</b>");
 
-marker5.bindPopup("<b>Harlem African Burial Ground</b><br>lees meer.");
+marker5.bindPopup("<b>Harlem African Burial Ground</b>");
 
 
 /////// free popop on map on page-load
@@ -737,7 +737,6 @@ var geojson9 = {
 }
 
 
-
 L.geoJSON(geojson1, {
   style : function(feature) {
     return {
@@ -751,7 +750,7 @@ L.geoJSON(geojson1, {
 L.geoJSON(geojson2, {
   style : function(feature) {
     return {
-      color: '#315eaa',
+      color: '#cb291a',
       weight: 2,
       fillOpacity: 0.6
     }
@@ -782,7 +781,7 @@ L.geoJSON(geojson4, {
 L.geoJSON(geojson5, {
   style : function(feature) {
     return {
-      color: '#B0A437',
+      color: '#cb291a',
       weight: 2,
       fillOpacity: 0.6
     }
@@ -814,7 +813,7 @@ L.geoJSON(geojson7, {
 L.geoJSON(geojson8, {
   style : function(feature) {
     return {
-      color: '#734604',
+      color: '#cb291a',
       weight: 1,
       fillOpacity: 1
     }

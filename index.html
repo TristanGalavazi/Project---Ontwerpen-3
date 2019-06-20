@@ -435,16 +435,16 @@ L.tileLayer('https://api.mapbox.com/styles/v1/tgalavazi/cjwrp8kaj06id1cpmsh9w9hv
      {icon: cssIcon},
   ).addTo(mymap);
 
-marker1.bindPopup("<b>African Burial Ground</b><br>");
+marker1.bindPopup("<b>African Burial Ground National Monument</b><br>");
   // .openPopup();  popup open from page-load
 
 marker2.bindPopup("<b>Wall Street</b>");
 
 marker3.bindPopup("<b>Minetta Street</b>");
 
-marker4.bindPopup("<b>Peter Stuyvesant</b>");
+marker4.bindPopup("<b>The Bowery: Peter Stuyvesant</b>");
 
-marker5.bindPopup("<b>Harlem African Burial Ground</b>");
+marker5.bindPopup("<b>Harlem African Burial Ground: verlaten busdepot</b>");
 
 
 /////// free popop on map on page-load
@@ -472,7 +472,7 @@ marker5.bindPopup("<b>Harlem African Burial Ground</b>");
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {"popupContent": "The Bowery: ook wel het land van de Gouverneur Peter Stuyvesant die de kolonie bestuurde van 1645 tot 1664."},
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -544,7 +544,7 @@ marker5.bindPopup("<b>Harlem African Burial Ground</b>");
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {"popupContent": "Begraafplaats waar o.a. 140 botten en botfragmenten en één intacte schedel is gevonden van een vrouw van Afrikaanse afkomst."},
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -570,7 +570,7 @@ var geojson5 = {
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {"popupContent": "De Harlem Burial Grounds was verbonden aan deze kerk: De <em>Elmendorf Reformed Church</em>."},
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -595,7 +595,7 @@ var geojson6 = {
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {"popupContent": "Het gebied waar naar schatting 15.000 tot 20.000 mensen begraven liggen"},
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -614,13 +614,14 @@ var geojson6 = {
   ]
 }
 
+
 /// Nieuw-Amsterdam
 var geojson7 = {
   "type": "FeatureCollection",
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {"popupContent": "Het bewoonde land van de kolonie Nieuw-Amsterdam in het jaar 1660."},
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -690,7 +691,7 @@ var geojson9 = {
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {"popupContent": "Het oude beekje <em>The Minetta Brook</em> die door Greenwich Village liep en de kromming van Minetta Street vormde."},
       "geometry": {
         "type": "LineString",
         "coordinates": [
@@ -737,14 +738,18 @@ var geojson9 = {
 }
 
 
-L.geoJSON(geojson1, {
-  style : function(feature) {
-    return {
-      color: '#c04f26',
-      weight: 1,
-     className: 'blink1',
-    }
-  }
+
+function style(feature4) {
+  return {
+    color: '#c04f26',
+    weight: 2,
+    fillOpacity: 0.4,
+    className: 'blink1',
+  };
+}
+var myGeoJson = L.geoJson(geojson1, {
+  style: style,
+  onEachFeature: onEachFeature
 }).addTo(mymap);
 
 L.geoJSON(geojson2, {
@@ -767,47 +772,62 @@ L.geoJSON(geojson3, {
   }
 }).addTo(mymap);
 
-L.geoJSON(geojson4, {
-  style : function(feature) {
-    return {
-      color: '#000',
-      weight: 0.4,
-      fillOpacity: 0.4,
-      className: 'blink1',
-    }
-  }
+function style(feature5) {
+  return {
+    color: '#c04f26',
+    weight: 2,
+    fillOpacity: 0.4,
+    className: 'blink1',
+  };
+}
+var myGeoJson = L.geoJson(geojson4, {
+  style: style,
+  onEachFeature: onEachFeature
 }).addTo(mymap);
 
-L.geoJSON(geojson5, {
-  style : function(feature) {
-    return {
-      color: '#cb291a',
-      weight: 2,
-      fillOpacity: 0.6
-    }
-  }
+function style(feature6) {
+  return {
+    color: '#c04f26',
+    weight: 2,
+    fillOpacity: 0.4,
+    className: 'blink1',
+  };
+}
+var myGeoJson = L.geoJson(geojson5, {
+  style: style,
+  onEachFeature: onEachFeature
 }).addTo(mymap);
 
-L.geoJSON(geojson6, {
-  style : function(feature) {
-    return {
-      color: '#000',
-      weight: 0.4,
-      fillOpacity: 0.4,
-      className: 'blink1',
-    }
+function style(feature) {
+  return {
+    color: '#c04f26',
+    weight: 2,
+    fillOpacity: 0.4,
+    className: 'blink1',
+  };
+}
+function onEachFeature(feature, layer) {
+  // does this feature have a property named popupContent?
+  if (feature.properties && feature.properties.popupContent) {
+    layer.bindPopup(feature.properties.popupContent);
   }
+}
+var myGeoJson = L.geoJson(geojson6, {
+  style: style,
+  onEachFeature: onEachFeature
 }).addTo(mymap);
 
-L.geoJSON(geojson7, {
-  style : function(feature) {
-    return {
-      color: '#c04f26',
-      weight: 1,
-      fillOpacity: 0.4,
-      className: 'blink1',
-    }
-  }
+function style(feature2) {
+  return {
+    color: '#c04f26',
+    weight: 2,
+    fillOpacity: 0.4,
+    className: 'blink1',
+  };
+}
+var myGeoJson = L.geoJson(geojson7, {
+  style: style,
+  onEachFeature: onEachFeature
 }).addTo(mymap);
 
 L.geoJSON(geojson8, {
@@ -820,16 +840,132 @@ L.geoJSON(geojson8, {
   }
 }).addTo(mymap);
 
-L.geoJSON(geojson9, {
-  style : function(feature) {
-    return {
-      color: '#0A58CA',
-      weight: 1,
-      fillOpacity: 1,
-      className: 'blink1',
-    }
-  }
+function style(feature3) {
+  return {
+    color: '#c04f26',
+    weight: 2,
+    fillOpacity: 0.4,
+    className: 'blink1',
+  };
+}
+var myGeoJson = L.geoJson(geojson9, {
+  style: style,
+  onEachFeature: onEachFeature
 }).addTo(mymap);
+
+// L.geoJSON(geojson1, {
+//   style : function(feature) {
+//     return {
+//       color: '#c04f26',
+//       weight: 1,
+//      className: 'blink1',
+//     }
+//   }
+// }).addTo(mymap);
+//
+// L.geoJSON(geojson2, {
+//   style : function(feature) {
+//     return {
+//       color: '#cb291a',
+//       weight: 2,
+//       fillOpacity: 0.6
+//     }
+//   }
+// }).addTo(mymap);
+//
+// L.geoJSON(geojson3, {
+//   style : function(feature) {
+//     return {
+//       color: '#cb291a',
+//       weight: 2.5,
+//       fillOpacity: 0.6
+//     }
+//   }
+// }).addTo(mymap);
+//
+// L.geoJSON(geojson4, {
+//   style : function(feature) {
+//     return {
+//       color: '#000',
+//       weight: 0.4,
+//       fillOpacity: 0.4,
+//       className: 'blink1',
+//     }
+//   }
+// }).addTo(mymap);
+//
+// L.geoJSON(geojson5, {
+//   style : function(feature) {
+//     return {
+//       color: '#cb291a',
+//       weight: 2,
+//       fillOpacity: 0.6
+//     }
+//   }
+// }).addTo(mymap);
+//
+// L.geoJSON(geojson6, {
+//   style : function(feature) {
+//     return {
+//       color: '#000',
+//       weight: 0.4,
+//       fillOpacity: 0.4,
+//       className: 'blink1',
+//     }
+//   }
+// }).addTo(mymap);
+//
+// function style(feature) {
+//   return {
+//     color: '#000',
+//     weight: 0.4,
+//     fillOpacity: 0.4,
+//     className: 'blink1',
+//   };
+// }
+// function onEachFeature(feature, layer) {
+//   // does this feature have a property named popupContent?
+//   if (feature.properties && feature.properties.popupContent) {
+//     layer.bindPopup(feature.properties.popupContent);
+//   }
+// }
+// var myGeoJson = L.geoJson(geojson6, {
+//   style: style,
+//   onEachFeature: onEachFeature
+// }).addTo(mymap);
+//
+//
+// L.geoJSON(geojson7, {
+//   style : function(feature2) {
+//     return {
+//       color: '#c04f26',
+//       weight: 1,
+//       fillOpacity: 0.4,
+//       className: 'blink1',
+//     }
+//   }
+// }).addTo(mymap);
+//
+// L.geoJSON(geojson8, {
+//   style : function(feature) {
+//     return {
+//       color: '#cb291a',
+//       weight: 1,
+//       fillOpacity: 1
+//     }
+//   }
+// }).addTo(mymap);
+//
+// L.geoJSON(geojson9, {
+//   style : function(feature) {
+//     return {
+//       color: '#0A58CA',
+//       weight: 1,
+//       fillOpacity: 1,
+//       className: 'blink1',
+//     }
+//   }
+// }).addTo(mymap);
 
 
 </script>
